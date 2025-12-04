@@ -1,6 +1,6 @@
-# 📝 Todos Fullstack Project (ASP.NET Core & SAPUI5)
+# 📝Fullstack Project (ASP.NET Core & SAPUI5)
 
-Este repositório contém uma aplicação Fullstack de gerenciamento de tarefas ("Todos"), utilizando **ASP.NET Core Web API** para o backend e **SAPUI5/OpenUI5** para o frontend.
+Este repositório contém uma aplicação Fullstack de gerenciamento de tarefas, utilizando **ASP.NET Core Web API** para o backend e **SAPUI5/OpenUI5** para o frontend.
 
 ---
 
