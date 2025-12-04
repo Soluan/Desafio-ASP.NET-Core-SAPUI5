@@ -1,0 +1,11 @@
+<mvc:View controllerName="myapp.controller.Detail" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+  <Page title="Detalhes">
+    <content>
+      <VBox>
+        <Text text="{/todo/title}" />
+        <Text text="User: {/todo/userId}" />
+        <Text text="Completed: {/todo/completed}" />
+      </VBox>
+    </content>
+  </Page>
+</mvc:View>

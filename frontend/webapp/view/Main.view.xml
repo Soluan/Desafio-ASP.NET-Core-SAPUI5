@@ -1,0 +1,38 @@
+<mvc:View controllerName="myapp.controller.Main" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+  <App id="app">
+    <pages>
+      <Page title="Todos">
+        <content>
+          <VBox>
+            <SearchField id="search" width="100%" search="onSearch" liveChange="onLiveChange" placeholder="Pesquisar title..." />
+            <HBox justifyContent="SpaceBetween" alignItems="Center">
+              <Text id="count" text=" " />
+              <Button text="Sync from server" press="onSync" />
+            </HBox>
+            <List id="todoList" items="{/items}">
+              <items>
+                <CustomListItem>
+                  <HBox justifyContent="SpaceBetween" width="100%">
+                    <VBox>
+                      <Text text="{title}" wrapping="false" class="{= ${completed} ? 'completedText' : '' }" />
+                      <Text text="User: {userId}" />
+                    </VBox>
+                    <HBox>
+                      <CheckBox selected="{completed}" select="onToggleCompleted" />
+                      <Button text="Detalhes" press="onDetails" type="Transparent" />
+                    </HBox>
+                  </HBox>
+                </CustomListItem>
+              </items>
+            </List>
+            <HBox justifyContent="Center" id="pagination">
+              <Button text="Prev" press="onPrevPage" />
+              <Text id="pageInfo" text="Page 1" />
+              <Button text="Next" press="onNextPage" />
+            </HBox>
+          </VBox>
+        </content>
+      </Page>
+    </pages>
+  </App>
+</mvc:View>

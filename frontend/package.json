@@ -1,0 +1,11 @@
+{
+  "name": "myapp-frontend",
+  "version": "1.0.0",
+  "description": "Frontend SAPUI5 para a API Todo",
+  "scripts": {
+    "start": "ui5 serve -o webapp/index.html"
+  },
+  "devDependencies": {
+    "ui5-middleware-simpleproxy": "^3.6.0"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "sap.app": {
+    "id": "myapp",
+    "type": "application",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "title": "Todos UI5"
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "myapp.view.Main",
+      "type": "XML",
+      "async": true
+    },
+    "models": {
+      "": {
+        "type": "sap.ui.model.json.JSONModel",
+        "settings": {
+          "data": {}
+        }
+      }
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "myapp.view",
+        "controlId": "app",
+        "controlAggregation": "pages",
+        "bypassed": {
+          "target": "main"
+        }
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "main",
+          "target": "main"
+        },
+        {
+          "pattern": "detail/{id}",
+          "name": "detail",
+          "target": "detail"
+        }
+      ],
+      "targets": {
+        "main": {
+          "viewName": "Main"
+        },
+        "detail": {
+          "viewName": "Detail"
+        }
+      }
+    }
+  }
+}
